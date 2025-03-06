@@ -1,0 +1,4 @@
+npx pretty-quick --lint-staged
+
+yarn test
+yarn build
