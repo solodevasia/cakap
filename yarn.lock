@@ -275,6 +275,16 @@
   dependencies:
     tslib "^2.3.0"
 
+"@angular/localize@19.2.1":
+  version "19.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/localize/-/localize-19.2.1.tgz#70dcc62ca248cd691fba66939f7fe8320a201d3a"
+  integrity sha512-8j/5EqmFvXh/MkLTKQZMAuTKL9QecOJfern/CUi94VoBWuZq695rbBG51ua3m/r2VWVQ1yB4iiOxa03j+slVOQ==
+  dependencies:
+    "@babel/core" "7.26.9"
+    "@types/babel__core" "7.20.5"
+    fast-glob "3.3.3"
+    yargs "^17.2.1"
+
 "@angular/platform-browser-dynamic@^19.2.0":
   version "19.2.1"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-19.2.1.tgz#586889611470996be8130e714a13f966e6675d39"
@@ -2127,6 +2137,20 @@
     "@napi-rs/nice-win32-ia32-msvc" "1.0.1"
     "@napi-rs/nice-win32-x64-msvc" "1.0.1"
 
+"@ngrx/signals@19.0.1":
+  version "19.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/signals/-/signals-19.0.1.tgz#93c1a8557fb340f530b393535fdd2b187469c86a"
+  integrity sha512-e9cGgF//tIyN1PKDDcBQkI0csxRcw4r9ezTtDzQpM2gPU5frD9JxaW/YU5gM02ZMl97bUMoI82fBtnDN0RtyWg==
+  dependencies:
+    tslib "^2.3.0"
+
+"@ngrx/store@19.0.1":
+  version "19.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-19.0.1.tgz#65d74333c814ddf83e851ca5f99523ca00ebf746"
+  integrity sha512-+6eBLb+0rdJ856JRuKnvSzFxv1ISbYuX/OM12dMPf4wm+ddxjhyvi6tF8lPiNnaYb717PGNxXQzBFIGfIs4zGQ==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngtools/webpack@19.2.1":
   version "19.2.1"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-19.2.1.tgz#330515cc27595b64030bd6768ad09c05e215b639"
@@ -2616,7 +2640,7 @@
     "@tufjs/canonical-json" "2.0.0"
     minimatch "^9.0.5"
 
-"@types/babel__core@^7.1.14":
+"@types/babel__core@7.20.5", "@types/babel__core@^7.1.14":
   version "7.20.5"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.20.5.tgz#3df15f27ba85319caa07ba08d0721889bb39c017"
   integrity sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==
@@ -6987,6 +7011,13 @@ neo-async@^2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
+
+ngx-infinite-scroll@^19.0.0:
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-infinite-scroll/-/ngx-infinite-scroll-19.0.0.tgz#7b24d148426ccf9f0524d1a14eb4952d97cee415"
+  integrity sha512-Ft4xNNDLXoDGi2hF6ylehjxbG8JIgfoL6qDWWcebGMcbh1CEfEsh0HGkDuFlX/cBBMenRh2HFbXlYq8BAtbvLw==
+  dependencies:
+    tslib "^2.3.0"
 
 node-addon-api@^6.1.0:
   version "6.1.0"

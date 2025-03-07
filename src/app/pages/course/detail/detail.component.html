@@ -1,0 +1,92 @@
+<div class="container mx-auto" *ngIf="selector()">
+    <div  class="bg-[#0069b1] w-full pl-2 p-5 relative">
+        <img src="https://s3-ap-southeast-1.amazonaws.com/resources.squline.com/upskill/assets/png/icon-back.png" alt="icon"
+        class="w-[32px] absolute top-5 left-3 cursor-pointer" (click)="onBack()">
+        <div class="flex items-center justify-between pl-1 px-12">
+            <div>
+                <div class="text-[16px] text-white font-light mt-6 mb-[12px]">{{selector().courseDetail.categoriesName}}</div>
+                <div class="text-[24px] text-white mb-[12px] font-semibold">{{selector().courseDetail.courseName}}</div>
+                <div class="flex items-center">
+                    @for (item of [1, 2, 3, 4, 5]; track $index) {
+                        <div>
+                            <img
+                          [src]="
+                            $index !== 4 ? 'https://s3-ap-southeast-1.amazonaws.com/resources.squline.com/upskill/assets/png/star/star-100.png' : item === selector().courseDetail.rating
+                              ? 'https://s3-ap-southeast-1.amazonaws.com/resources.squline.com/upskill/assets/png/star/star-100.png'
+                              : 'https://s3-ap-southeast-1.amazonaws.com/resources.squline.com/upskill/assets/png/star/star-50.png'
+                          "
+                          width="16"
+                          height="16"
+                          alt="star"
+                        />
+                        </div>
+                      }
+                </div>
+                <div class="flex items-center">
+                    <p class="m-0 text-[#f3ac49]">{{selector().courseDetail.rating}}</p>
+                    <p class="m-0 text-[#f3ac49] ml-2 font-">({{selector().courseDetail.rating}} Ulasan)</p>
+                </div>
+            </div>
+            <img [src]="selector().courseDetail.icon?.large" alt="" class="h-[180px]">
+        </div>
+    </div>
+    <div class="flex justify-between p-2 bg-white shadow">
+        <div class="flex-1">
+            <div class="py-[15px] px-[20px] mr-3 bg-[#f5f5f5] flex items-center justify-between rounded-md flex-1 h-[65px]">
+                <div class="flex items-center">
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/resources.squline.com/upskill/assets/course/label-certificate.png" alt=""
+                    class="w-[32px]">
+                    <div class="ml-2">
+                        <p class="text-[12px] text-[#686677] font-normal m-0">Mendapatkan</p>
+                        <p class="text-[14px] text-[#2a2a30] font-medium m-0">Certificate of Completion</p>
+                    </div>
+                </div>
+                <div class="pr-6 pl-4 border-l border-gray-200">
+                    <p class="m-0 text-[#686677] text-[12px] font-normal">Kursus</p>
+                    <div class="flex items-center">
+                        <p class="m-0 text-[#98c93c] font-semibold capitalize pr-[5px]">{{selector().courseDetail.courseType?.toLowerCase()}}</p>
+                        <img src="https://s3.ap-southeast-1.amazonaws.com/resources.squline.com/upskill/assets/icons/info.svg" alt="" class="">
+                    </div>
+                </div>
+            </div>
+            <div class="pt-9">
+                <div class="flex mb-4">
+                    <img [src]="selector().courseDetail.partner?.partnerLogo?.large" alt="" class="w-[64px] border border-dotted border-[#DDDDEA] rounded">
+                    <div class="ml-3">
+                        <p class="m-0 mb-1 font-light">Institusi</p>
+                        <p class="m-0 font-bold text-[#2a2a30]">{{selector().courseDetail.partner?.partnerName}}</p>
+                    </div>
+                </div>
+                <div [innerHTML]="selector().courseDetail.partner?.partnerDescription" class="mb-8"></div>
+                <div class="border-t border-gray-200 pt-2">
+                    <h1 class="mb-4 font-bold text-[24px]">Tentang Kursus</h1>
+                    <div [innerHTML]="selector().courseDetail.courseDescription?.aboutCourse" class="mb-10"></div>
+                    <h1 class="mb-4 font-bold text-[24px]">Tentang Kursus</h1>
+                    <div [innerHTML]="selector().courseDetail.courseDescription?.curriculum" class="course-curriculum mb-10"></div>
+                </div>
+                <div class="border-t border-gray-200 pt-2">
+                    <h1 class="mb-4 font-bold text-[24px]">Jadwal Kursus</h1>
+                    <div [innerHTML]="selector().courseDetail.courseDescription?.schedule" class="mb-10"></div>
+                </div>
+                <div class="border-t border-gray-200 pt-2">
+                    <h1 class="mb-4 font-bold text-[24px]">Apa yang Kamu Dapat</h1>
+                    <div [innerHTML]="selector().courseDetail.courseDescription?.facilities" class="course-curriculum mb-10"></div>
+                </div>
+                <div class="border-t border-gray-200 pt-2">
+                    <h1 class="mb-4 font-bold text-[24px]">Syarat & Ketentuan</h1>
+                    <div [innerHTML]="selector().courseDetail.courseDescription?.termAndCondition" class="course-curriculum mb-10"></div>
+                </div>
+                <div class="border-t border-gray-200 pt-2">
+                    <h1 class="mb-4 font-bold text-[24px]">Penukaran Kode Belajar</h1>
+                    <div [innerHTML]="selector().courseDetail.courseDescription?.howToRedeem" class="course-curriculum mb-10"></div>
+                </div>
+            </div>
+        </div>
+        <div class="w-[min(405px,100%)] h-[145px] sticky top-[70px] rounded-md border border-gray-300 mr-8">
+            <div class="p-[15px] w-full text-right">
+                <p class="m-0 text-[18px] text-[#98c93c]">{{selector().courseDetail.basicPrice}}<p>
+                <cakap-button classes="w-full bg-[#98c93c] font-bold !p-[15px] rounded mt-4" type="button">Beli Kursus</cakap-button>
+            </div>
+        </div>
+    </div>
+</div>

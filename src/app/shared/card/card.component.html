@@ -1,0 +1,63 @@
+<div
+  class="rounded-[4px] border border-[#E0E0E0] shadow-card flex flex-col max-w-[240px] h-full w-full min-h-[380px] relative"
+  (click)="onclick ? onClick() : null"
+>
+  <div class="h-[140px] relative w-[238px] overflow-hidden">
+    <img [src]="image" alt="" class="absolute left-0 top-0 w-full h-full" />
+  </div>
+  <div class="pt-0 p-[15px] mt-[16px]">
+    <p
+      class="line-clamp-2 text-[16px] text-card-title text-left m-0 font-semibold"
+    >
+      {{ title }}
+    </p>
+    <p class="m-0 text-[14px] text-gray-400 font-light text-caption">
+      {{ topic }}
+    </p>
+    <div class="flex items-centerm mt-[6px]">
+      <img [src]="logo" alt="" class="w-[24px]" />
+      <p class="m-0 text-[14px] text-icon ml-2">{{ logoName }}</p>
+    </div>
+    <div class="flex items-center mt-2">
+      @for (item of [1, 2, 3, 4, 5]; track $index) {
+        <img
+          [src]="
+            item === 5
+              ? 'https://s3-ap-southeast-1.amazonaws.com/resources.squline.com/upskill/assets/png/star/star-50.png'
+              : 'https://s3-ap-southeast-1.amazonaws.com/resources.squline.com/upskill/assets/png/star/star-100.png'
+          "
+          alt=""
+          width="16"
+          height="16"
+        />
+      }
+      <p class="text-[#f3ac49] font-semibold text-[14px] mx-1">{{ rating }}</p>
+      <p class="p m-0 text-bold text-[#f3ac49] text-[14px]">
+        ({{ reviewTotal }})
+      </p>
+    </div>
+  </div>
+  <div class="absolute bottom-4 left-4">
+    <div class="flex items-center">
+      <div *ngIf="discount" class="flex items-center">
+        <div
+          class="bg-[#F9EAD4] text-[#f3ac49] p-[3px] text-[12px] rounded-[4px]"
+        >
+          {{ discount }}
+        </div>
+        <p
+          class="text-[12px] text-disable-currency ml-2 font-light line-through"
+        >
+          {{ discountTotal }}
+        </p>
+      </div>
+    </div>
+    <p
+      [class]="
+        price === 'Rp0' ? 'text-[#98c93c] font-bold' : 'font-bold text-currency'
+      "
+    >
+      {{ price === "Rp0" ? "Gratis" : price }}
+    </p>
+  </div>
+</div>

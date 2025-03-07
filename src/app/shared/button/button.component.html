@@ -1,0 +1,10 @@
+<button
+  [attr.data-testid]="id"
+  [id]="id"
+  [type]="type"
+  class="px-4 py-[7px] bg-[#0069B1] text-[#fff] text-[14px]"
+  [class]="classes"
+  (click)="onclick ? onClick() : null"
+>
+  <ng-content></ng-content>
+</button>

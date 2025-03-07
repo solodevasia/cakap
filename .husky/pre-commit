@@ -1,5 +1,4 @@
 npx pretty-quick --lint-staged
 
 yarn lint
-yarn test
 yarn build

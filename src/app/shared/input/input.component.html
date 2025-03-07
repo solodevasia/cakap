@@ -1,0 +1,17 @@
+<div
+  class="flex items-center justify-between border border-gray-200 p-2 rounded-md"
+  [class]="classes"
+>
+  <input
+    [attr.data-testid]="id"
+    [id]="id"
+    [name]="name"
+    class="outline-none text-[14px]"
+    [class]="inputClasses"
+    [formControl]="controls"
+    [placeholder]="placeholder"
+    (keyup.enter)="onenter ? onEnter() : null"
+    autocomplete="off"
+  />
+  <ng-content></ng-content>
+</div>

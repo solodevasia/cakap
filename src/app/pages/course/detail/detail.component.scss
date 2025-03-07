@@ -1,0 +1,17 @@
+::ng-deep .course-curriculum {
+     ul {
+        padding-left: 20px;
+        li {
+            list-style-type: disc;
+            list-style-position: inside;
+            font-size: 14px;
+            font-weight: 300;
+        }
+    }
+    a {
+        color: blue;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

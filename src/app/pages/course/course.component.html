@@ -1,0 +1,23 @@
+<div class="flex items-center flex-wrap p-10 h-[800px] overflow-y-auto"
+      infiniteScroll
+      [infiniteScrollDistance]="1.5"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="onScroll()"
+      [scrollWindow]="false">
+  @for (item of selector().courses; track $index) {
+    <div class="m-2">
+      <cakap-card
+        [image]="item.classImage"
+        [title]="item.title"
+        [topic]="item.topic"
+        [rating]="item.reviews.rating"
+        [reviewTotal]="item.reviews.total"
+        [discount]="item.promoText"
+        [discountTotal]="item.price.oldPrice"
+        [price]="item.price.newPrice"
+        [value]="item.id"
+        (onclick)="onDetail($event)"
+      ></cakap-card>
+    </div>
+  }
+</div>
